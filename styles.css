@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(225, 66, 66, 0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#loginForm input {
+    margin: 5px;
+    padding: 10px;
+}
+
+#calendar-container {
+    width: 80%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#calendar-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#calendar-controls {
+    margin-top: 5px;
+}
+
+#updateCalendar {
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+table.calendar {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table.calendar th, table.calendar td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+table.calendar th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.calendar td {
+    height: 50px;
+}
+
+.select-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+#confirmButton {
+    padding: 10px 10px;
+    font-size: 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#confirmButton:hover {
+    background-color: #0056b3;
+}
+
+#confirmReservation {
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#confirmReservation:hover {
+    background-color: #0056b3;
+}

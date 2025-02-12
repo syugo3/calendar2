@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>予約フォーム</title>
+</head>
+<body>
+    <div class="container">
+        <h1>必要な情報を入力</h1>
+        <form id="reservation-form">
+            <div>
+                <label for="reservation-name">名前：</label>
+                <input type="text" id="reservation-name" required>
+            </div>
+            <div>
+                <label for="reservation-email">メールアドレス：</label>
+                <input type="email" id="reservation-email" required>
+            </div>
+            <div>
+                <label for="reservation-phone">電話番号：</label>
+                <input type="tel" id="reservation-phone" required>
+            </div>
+            <input type="hidden" id="selected-date">
+            <button id="confirmButton">予約確認</button>
+        </form>
+        <div id="confirmation-message" style="display: none;"></div>
+    </div>
+    <script src="reservation.js"></script>
+</body>
+</html> 

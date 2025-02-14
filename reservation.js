@@ -14,6 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const phone = document.getElementById('reservation-phone').value;
 
         // 予約確認ページに遷移
-        window.location.href = `reservation-confirmation.html?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}&date=${encodeURIComponent(selectedDate)}`;
+        window.location.href = 'reservation-confirmation.html?name=' + encodeURIComponent(name) + '&email=' + encodeURIComponent(email) + '&phone=' + encodeURIComponent(phone) + '&date=' + encodeURIComponent(selectedDate);
     });
 }); 

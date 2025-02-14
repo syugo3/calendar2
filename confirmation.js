@@ -9,13 +9,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const phone = urlParams.get('phone');
     const date = urlParams.get('date');
 
+    // パラメータが正しく取得できているか確認
+    console.log('名前:', name);
+    console.log('メールアドレス:', email);
+    console.log('電話番号:', phone);
+    console.log('日付:', date);
+
     // 予約の詳細を表示
-    confirmationDetails.innerHTML = `
-        <p>名前: ${name}</p>
-        <p>メールアドレス: ${email}</p>
-        <p>電話番号: ${phone}</p>
-        <p>日付: ${date}</p>
-    `;
+    if (name && email && phone && date) {
+        confirmationDetails.innerHTML = `
+            <p>名前: ${name}</p>
+            <p>メールアドレス: ${email}</p>
+            <p>電話番号: ${phone}</p>
+            <p>日付: ${date}</p>
+        `;
+    } else {
+        confirmationDetails.innerHTML = `<p>予約情報が正しく取得できませんでした。</p>`;
+    }
 
     // 予約確定ボタンのイベントリスナー
     document.getElementById('confirmReservation').addEventListener('click', () => {

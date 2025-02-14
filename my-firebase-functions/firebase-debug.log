@@ -1,0 +1,28 @@
+[debug] [2025-02-12T05:53:19.123Z] ----------------------------------------------------------------------
+[debug] [2025-02-12T05:53:19.135Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init functions
+[debug] [2025-02-12T05:53:19.136Z] CLI Version:   13.30.0
+[debug] [2025-02-12T05:53:19.136Z] Platform:      darwin
+[debug] [2025-02-12T05:53:19.137Z] Node Version:  v22.14.0
+[debug] [2025-02-12T05:53:19.137Z] Time:          Wed Feb 12 2025 14:53:19 GMT+0900 (Japan Standard Time)
+[debug] [2025-02-12T05:53:19.137Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-02-12T05:53:19.148Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-12T05:53:19.148Z] > authorizing via signed-in user (syugotoyama@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/touyamaosamuaogiri/Calendar/calendar-reservation-system/frontend/my-firebase-functions
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 

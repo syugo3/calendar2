@@ -57,6 +57,12 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = `reservation.html?date=${date}`; // 予約フォームページに遷移
     };
 
+    function showReservationForm(date) {
+        const reservationForm = document.getElementById('reservation-form');
+        const selectedDateInput = document.getElementById('selected-date');
+        selectedDateInput.value = date; // 選択した日付をフォームに設定
+        reservationForm.style.display = 'block'; // フォームを表示
+    }
     // 初期表示
     updateCalendar();
 });

@@ -1,3 +1,16 @@
+// Firebaseの設定を追加（ファイルの先頭に追加）
+const firebaseConfig = {
+    apiKey: "AIzaSyB1mZnfUrXesUadds4hGzUIK2u_tpCYPlQ",
+    authDomain: "calendar-d1047.firebaseapp.com",
+    projectId: "calendar-d1047",
+    storageBucket: "calendar-d1047.appspot.com",
+    messagingSenderId: "584516008910",
+    appId: "1:584516008910:web:ee9b37913b85a3c465c99f"
+};
+
+// Firebaseの初期化
+firebase.initializeApp(firebaseConfig);
+
 document.addEventListener('DOMContentLoaded', () => {
     const confirmationDetails = document.getElementById('confirmation-details');
     const confirmationSelect = document.getElementById('confirmation-select');
@@ -29,8 +42,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 予約確定ボタンのイベントリスナー
     document.getElementById('confirmReservation').addEventListener('click', () => {
-        alert('予約確定いたしました。');
-        // ここで必要に応じてサーバーに予約情報を送信する処理を追加
-        window.location.href = 'index.html';
+        // Firestoreに予約情報を保存
+        firebase.firestore().collection('reservations').add({
+            name: name,
+            email: email,
+            phone: phone,
+            date: date,
+            createdAt: new Date().toISOString()
+        })
+        .then(() => {
+            console.log('予約情報がFirestoreに保存されました');
+            alert('予約確定いたしました。');
+            window.location.href = 'index.html';
+        })
+        .catch((error) => {
+            console.error('Firestoreへの保存エラー:', error);
+            alert('予約の保存中にエラーが発生しました: ' + error.message);
+        });
     });
-}); 
+});
